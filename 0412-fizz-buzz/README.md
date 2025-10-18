@@ -63,6 +63,7 @@ Return the result list after the loop.
 
 # 💻 Example
 Input: n = 5
+
 Output: ["1", "2", "Fizz", "4", "Buzz"]
 
 
