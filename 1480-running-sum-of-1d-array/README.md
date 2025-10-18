@@ -31,3 +31,36 @@
 	<li><code>1 &lt;= nums.length &lt;= 1000</code></li>
 	<li><code>-10^6&nbsp;&lt;= nums[i] &lt;=&nbsp;10^6</code></li>
 </ul>
+
+
+
+---
+
+## 🧠 Intuition  
+We need to find the cumulative sum at each position in the array.  
+Instead of recalculating sums repeatedly, we can maintain a running total that adds each number progressively.
+
+---
+
+## ⚙️ Approach  
+1. Initialize a variable `total = 0` to store the cumulative sum.  
+2. Create an empty list `result = []` to store running sums.  
+3. Loop through each element in `nums`:  
+   - Add the element to `total`.  
+   - Append the updated total to `result`.  
+4. Return `result` after the loop ends.  
+
+**Example:**  
+`nums = [1,2,3,4]` → `[1, 3, 6, 10]`
+
+---
+
+## ⏱️ Complexity  
+- **Time Complexity:** O(n) – traverse the array once.  
+- **Space Complexity:** O(n) – store the running sum results.  
+  *(Can be O(1) if done in-place.)*
+
+---
+
+
+
