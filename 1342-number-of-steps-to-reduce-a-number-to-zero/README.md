@@ -90,7 +90,7 @@ Step	Operation	New Value	Explanation
 
 ---
 
-#⏱️ Complexity
+# ⏱️ Complexity
 
 Time Complexity: O(log n) — each division by 2 reduces the number exponentially.
 
