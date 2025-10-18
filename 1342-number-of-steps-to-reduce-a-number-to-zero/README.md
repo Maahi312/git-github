@@ -42,3 +42,57 @@ Step 4) 1 is odd; subtract 1 and obtain 0.
 <ul>
 	<li><code>0 &lt;= num &lt;= 10<sup>6</sup></code></li>
 </ul>
+
+
+---
+
+# 🧠 Intuition
+
+The problem asks how many operations it takes to reduce a given number to zero using two rules:
+
+If the number is even, divide it by 2.
+
+If the number is odd, subtract 1.
+
+Each operation counts as one step.
+This process continues until the number becomes 0.
+Essentially, every division by 2 removes one binary digit (bit shift), and every subtraction flips an odd number to even — making it a binary reduction problem.
+
+---
+
+# ⚙️ Approach
+
+Initialize a counter steps = 0 to track the number of operations.
+
+Loop while num > 0:
+
+If num is even (num % 2 == 0), divide it by 2 using integer division (num //= 2).
+
+If num is odd, subtract 1 (num -= 1).
+
+Increment the step counter after each operation (steps += 1).
+
+When num reaches 0, return the total count of steps.
+
+---
+
+# Process:
+
+Step	Operation	New Value	Explanation
+1	14 / 2	7	even → divide by 2
+2	7 - 1	6	odd → subtract 1
+3	6 / 2	3	even → divide by 2
+4	3 - 1	2	odd → subtract 1
+5	2 / 2	1	even → divide by 2
+6	1 - 1	0	odd → subtract 1
+
+✅ Total Steps: 6
+
+---
+
+#⏱️ Complexity
+
+Time Complexity: O(log n) — each division by 2 reduces the number exponentially.
+
+Space Complexity: O(1) — only a few variables are used.
+
