@@ -48,9 +48,10 @@ The 2nd customer is the richest with a wealth of 10.</pre>
 
 Each row in the accounts matrix represents one customer, and each column represents how much money that customer has in a particular bank.
 To find the richest customer, we simply need to calculate the sum of each row (each customer’s total wealth) and then identify the maximum among these totals.
+
 ---
 
-# In mathematical terms:
+In mathematical terms:
 
 Wealth
 (
@@ -103,7 +104,9 @@ max
 	​
 
 (Wealth(i))
+
 ---
+
 # ⚙️ Approach
 
 Initialize a variable max_wealth = 0 to track the richest customer’s wealth.
@@ -115,7 +118,9 @@ Compute the customer’s total wealth using sum(customer).
 Compare it with max_wealth and update if greater.
 
 After processing all customers, return max_wealth.
+
 ---
+
 # Example:
 
 accounts = [[1, 2, 3], [4, 5, 6]]
@@ -123,7 +128,9 @@ accounts = [[1, 2, 3], [4, 5, 6]]
 Customer 1 → 1 + 2 + 3 = 6  
 Customer 2 → 4 + 5 + 6 = 15  
 Maximum Wealth = 15
+
 ---
+
 # ⏱️ Complexity
 
 Time Complexity: O(m × n) → We traverse every element in the 2D list once
