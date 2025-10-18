@@ -41,3 +41,90 @@ The 2nd customer is the richest with a wealth of 10.</pre>
 	<li><code>1 &lt;= m, n &lt;= 50</code></li>
 	<li><code>1 &lt;= accounts[i][j] &lt;= 100</code></li>
 </ul>
+
+
+--
+🧠 Intuition
+
+Each row in the accounts matrix represents one customer, and each column represents how much money that customer has in a particular bank.
+To find the richest customer, we simply need to calculate the sum of each row (each customer’s total wealth) and then identify the maximum among these totals.
+
+In mathematical terms:
+
+Wealth
+(
+𝑖
+)
+=
+∑
+𝑗
+=
+1
+𝑛
+𝑎
+𝑐
+𝑐
+𝑜
+𝑢
+𝑛
+𝑡
+𝑠
+[
+𝑖
+]
+[
+𝑗
+]
+Wealth(i)=
+j=1
+∑
+n
+	​
+
+accounts[i][j]
+
+and we want:
+
+Maximum Wealth
+=
+max
+⁡
+𝑖
+(
+Wealth
+(
+𝑖
+)
+)
+Maximum Wealth=
+i
+max
+	​
+
+(Wealth(i))
+⚙️ Approach
+
+Initialize a variable max_wealth = 0 to track the richest customer’s wealth.
+
+Loop through each customer (each row in the accounts list):
+
+Compute the customer’s total wealth using sum(customer).
+
+Compare it with max_wealth and update if greater.
+
+After processing all customers, return max_wealth.
+
+Example:
+
+accounts = [[1, 2, 3], [4, 5, 6]]
+
+Customer 1 → 1 + 2 + 3 = 6  
+Customer 2 → 4 + 5 + 6 = 15  
+Maximum Wealth = 15
+
+⏱️ Complexity
+
+Time Complexity: O(m × n) → We traverse every element in the 2D list once
+(where m = number of customers, n = number of banks).
+
+Space Complexity: O(1) → Only one variable (max_wealth) is used to store the running maximum.
