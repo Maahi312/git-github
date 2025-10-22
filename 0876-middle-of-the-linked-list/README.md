@@ -42,7 +42,7 @@ I am using the Two Pointers (Slow & Fast) technique here:
 At a particular not the node1 is decided as the middle node. Why it works as a middle node, because
 
 1. Since node2 moves twice as fast as node1, by the time node2 reaches the end of the list,
-node1 has covered half the distance — i.e., it’s at the middle.
+node1 has covered half the distance,that is, it is at the middle.
 
 2. The loop stops when node2 or node2.next becomes None, ensuring we don’t go beyond the list’s end
 
