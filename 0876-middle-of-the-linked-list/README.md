@@ -60,4 +60,6 @@ node1 has covered half the distance,that is, it is at the middle.
 
 ---
 
-# Time & Space Complexity : single pass (O(n)) and constant space (O(1))
+# Time & Space Complexity : 
+
+single pass (O(n)) and constant space (O(1))
