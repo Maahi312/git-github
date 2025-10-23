@@ -20,3 +20,44 @@
 	<li><code>1 &lt;= ransomNote.length, magazine.length &lt;= 10<sup>5</sup></code></li>
 	<li><code>ransomNote</code> and <code>magazine</code> consist of lowercase English letters.</li>
 </ul>
+
+
+---
+
+# Step 1 — Create a frequency dictionary
+
+Initialize an empty dictionary called letter.
+
+Loop through each character in magazine.
+
+For every letter:
+
+If it already exists in the dictionary → increment its count.
+
+If it doesn’t exist → add it to the dictionary with a count of 1.
+
+This gives us a count of available letters from the magazine.
+
+---
+
+# Step 2 — Check each letter in ransomNote
+
+Loop through every character in ransomNote.
+
+For each letter:
+
+If it’s not in letter (not available) → return False.
+
+If the count for that letter is 0 (used up) → return False.
+
+Otherwise, use one → decrement the count by 1.
+
+---
+
+# Step 3 — Return True if all letters matched
+
+If the loop finishes (no missing or overused letters found), return True.
+
+That means every letter in ransomNote was successfully found and used from the magazine.
+
+---
