@@ -65,7 +65,7 @@ numRows → number of rows in the zigzag pattern.
 
 -> str → the function will return a string.
 
-# Edge case check:
+<h3>Edge case check:</h3>
 
 if numRows == 1 or numRows >= len(s):
     return s
@@ -75,7 +75,7 @@ If there’s only 1 row, there’s no zigzag, so return s.
 
 If the number of rows is greater than or equal to the string length, zigzag is same as original string.
 
-# Initialize rows:
+<h3>Initialize rows:</h3>
 
 row = [''] * numRows
 
@@ -86,7 +86,7 @@ Each element will store characters for that row.
 
 Example: if numRows = 3, row looks like ['', '', ''] at the start.
 
-# Current row pointer & direction:
+<h3>Current row pointer & direction:</h3>
 
 curr = 0
 nex = False
@@ -100,7 +100,7 @@ True → moving down
 
 False → moving up
 
-# Traverse each character:
+<h3>Traverse each character:</h3>
 
 for char in s:
     row[curr] += char
@@ -110,7 +110,7 @@ Add the character char to the current row (row[curr]).
 
 Example: if curr = 0 and char = 'P', then row[0] = 'P'.
 
-# Change direction at top/bottom:
+<h3>Change direction at top/bottom:</h3>
 
 if curr == 0 or curr == numRows - 1:
     nex = not nex
@@ -120,7 +120,7 @@ If we reach top row (0) or bottom row (numRows - 1), reverse direction.
 
 This is what creates the zigzag movement.
 
-# Move pointer:
+<h3>Move pointer:</h3>
 
 curr += 1 if nex else -1
 
@@ -129,7 +129,7 @@ If nex = True (moving down) → curr += 1
 
 If nex = False (moving up) → curr -= 1
 
-# Combine rows into final string:
+<h3>Combine rows into final string:</h3>
 
 return ''.join(row)
 
